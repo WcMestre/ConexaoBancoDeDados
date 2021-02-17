@@ -20,14 +20,13 @@ namespace ConexaoBancoDeDados
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            SqlConnection sqlConnection1 = new SqlConnection("Server=179.108.180.209;Database=wendel;User Id=sa;Password=senac123;");
-            
-            sqlConnection1.Open();
+            SqlConnection conexaoNova = new SqlConnection("Server=179.108.180.209;Database=wendel;User Id=sa;Password=senac123;");
+            conexaoNova.Open();
 
             //criando o select e o objeto de consulta
             string sql = "SELECT * FROM CIDADES";
-            SqlCommand cmd = new SqlCommand(sql, sqlConnection1);
-            cmd.Connection = sqlConnection1;
+            SqlCommand cmd = new SqlCommand(sql, conexaoNova);
+            cmd.Connection = conexaoNova;
             cmd.CommandText = sql;
 
             // cria o dataadapter...
@@ -41,7 +40,7 @@ namespace ConexaoBancoDeDados
             dtview.DataSource = dataSet;
             dtview.DataMember = dataSet.Tables[0].TableName;
          
-            sqlConnection1.Close();            
+            conexaoNova.Close();            
         }
 
         private void dtview_CellContentClick(object sender, DataGridViewCellEventArgs e)
