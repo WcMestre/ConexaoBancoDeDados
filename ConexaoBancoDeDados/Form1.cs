@@ -20,11 +20,11 @@ namespace ConexaoBancoDeDados
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            SqlConnection conexaoNova = new SqlConnection("Server=179.108.180.209;Database=wendel;User Id=sa;Password=senac123;");
+            SqlConnection conexaoNova = new SqlConnection("Server=179.108.180.209;Database=SistemaWendel;User Id=sa;Password=senac123;");
             conexaoNova.Open();
 
             //criando o select e o objeto de consulta
-            string sql = "SELECT * FROM CIDADES";
+            string sql = "SELECT * FROM Clientes";
             SqlCommand cmd = new SqlCommand(sql, conexaoNova);
             cmd.Connection = conexaoNova;
             cmd.CommandText = sql;
