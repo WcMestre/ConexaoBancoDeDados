@@ -45,7 +45,7 @@ namespace ConexaoBancoDeDados
             // dtview
             // 
             this.dtview.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtview.Location = new System.Drawing.Point(12, 260);
+            this.dtview.Location = new System.Drawing.Point(12, 263);
             this.dtview.Name = "dtview";
             this.dtview.Size = new System.Drawing.Size(776, 331);
             this.dtview.TabIndex = 0;

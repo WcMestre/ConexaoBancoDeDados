@@ -105,7 +105,7 @@ namespace ConexaoBancoDeDados
                     {
                         if (reader.Read())
                         {
-                             teste = txtcpf.Text = reader[1].ToString();
+                             teste = reader[1].ToString();
                              txtnome.Text = reader[0].ToString();
                              txtcpf.Text = reader[1].ToString();
                         }
