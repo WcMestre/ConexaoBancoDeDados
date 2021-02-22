@@ -36,13 +36,16 @@ namespace ConexaoBancoDeDados
             this.lbcpf = new System.Windows.Forms.Label();
             this.txtnome = new System.Windows.Forms.TextBox();
             this.txtcpf = new System.Windows.Forms.MaskedTextBox();
+            this.txpesquisar = new System.Windows.Forms.MaskedTextBox();
+            this.lbpesquisar = new System.Windows.Forms.Label();
+            this.btpesquisar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dtview)).BeginInit();
             this.SuspendLayout();
             // 
             // dtview
             // 
             this.dtview.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtview.Location = new System.Drawing.Point(12, 107);
+            this.dtview.Location = new System.Drawing.Point(12, 260);
             this.dtview.Name = "dtview";
             this.dtview.Size = new System.Drawing.Size(776, 331);
             this.dtview.TabIndex = 0;
@@ -50,7 +53,7 @@ namespace ConexaoBancoDeDados
             // 
             // btsalvar
             // 
-            this.btsalvar.Location = new System.Drawing.Point(518, 70);
+            this.btsalvar.Location = new System.Drawing.Point(518, 208);
             this.btsalvar.Name = "btsalvar";
             this.btsalvar.Size = new System.Drawing.Size(132, 31);
             this.btsalvar.TabIndex = 1;
@@ -60,7 +63,7 @@ namespace ConexaoBancoDeDados
             // 
             // btatualizar
             // 
-            this.btatualizar.Location = new System.Drawing.Point(656, 70);
+            this.btatualizar.Location = new System.Drawing.Point(656, 208);
             this.btatualizar.Name = "btatualizar";
             this.btatualizar.Size = new System.Drawing.Size(132, 31);
             this.btatualizar.TabIndex = 2;
@@ -72,7 +75,7 @@ namespace ConexaoBancoDeDados
             // 
             this.lbnome.AutoSize = true;
             this.lbnome.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbnome.Location = new System.Drawing.Point(7, 25);
+            this.lbnome.Location = new System.Drawing.Point(7, 163);
             this.lbnome.Name = "lbnome";
             this.lbnome.Size = new System.Drawing.Size(86, 25);
             this.lbnome.TabIndex = 3;
@@ -82,7 +85,7 @@ namespace ConexaoBancoDeDados
             // 
             this.lbcpf.AutoSize = true;
             this.lbcpf.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbcpf.Location = new System.Drawing.Point(7, 70);
+            this.lbcpf.Location = new System.Drawing.Point(7, 208);
             this.lbcpf.Name = "lbcpf";
             this.lbcpf.Size = new System.Drawing.Size(64, 25);
             this.lbcpf.TabIndex = 4;
@@ -91,7 +94,7 @@ namespace ConexaoBancoDeDados
             // txtnome
             // 
             this.txtnome.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtnome.Location = new System.Drawing.Point(82, 22);
+            this.txtnome.Location = new System.Drawing.Point(82, 160);
             this.txtnome.Name = "txtnome";
             this.txtnome.Size = new System.Drawing.Size(706, 31);
             this.txtnome.TabIndex = 5;
@@ -99,17 +102,50 @@ namespace ConexaoBancoDeDados
             // txtcpf
             // 
             this.txtcpf.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtcpf.Location = new System.Drawing.Point(82, 67);
+            this.txtcpf.Location = new System.Drawing.Point(82, 205);
             this.txtcpf.Mask = "000.000.000-00";
             this.txtcpf.Name = "txtcpf";
             this.txtcpf.Size = new System.Drawing.Size(166, 31);
             this.txtcpf.TabIndex = 6;
             // 
+            // txpesquisar
+            // 
+            this.txpesquisar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txpesquisar.Location = new System.Drawing.Point(137, 81);
+            this.txpesquisar.Mask = "000.000.000-00";
+            this.txpesquisar.Name = "txpesquisar";
+            this.txpesquisar.Size = new System.Drawing.Size(166, 31);
+            this.txpesquisar.TabIndex = 8;
+            // 
+            // lbpesquisar
+            // 
+            this.lbpesquisar.AutoSize = true;
+            this.lbpesquisar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbpesquisar.Location = new System.Drawing.Point(7, 84);
+            this.lbpesquisar.Name = "lbpesquisar";
+            this.lbpesquisar.Size = new System.Drawing.Size(124, 25);
+            this.lbpesquisar.TabIndex = 7;
+            this.lbpesquisar.Text = "Pesquisar:";
+            this.lbpesquisar.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // btpesquisar
+            // 
+            this.btpesquisar.Location = new System.Drawing.Point(320, 81);
+            this.btpesquisar.Name = "btpesquisar";
+            this.btpesquisar.Size = new System.Drawing.Size(132, 31);
+            this.btpesquisar.TabIndex = 9;
+            this.btpesquisar.Text = "Pesquisar";
+            this.btpesquisar.UseVisualStyleBackColor = true;
+            this.btpesquisar.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 606);
+            this.Controls.Add(this.btpesquisar);
+            this.Controls.Add(this.txpesquisar);
+            this.Controls.Add(this.lbpesquisar);
             this.Controls.Add(this.txtcpf);
             this.Controls.Add(this.txtnome);
             this.Controls.Add(this.lbcpf);
@@ -135,6 +171,9 @@ namespace ConexaoBancoDeDados
         private System.Windows.Forms.Label lbcpf;
         private System.Windows.Forms.TextBox txtnome;
         private System.Windows.Forms.MaskedTextBox txtcpf;
+        private System.Windows.Forms.MaskedTextBox txpesquisar;
+        private System.Windows.Forms.Label lbpesquisar;
+        private System.Windows.Forms.Button btpesquisar;
     }
 }
 

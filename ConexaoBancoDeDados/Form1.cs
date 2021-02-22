@@ -13,6 +13,8 @@ namespace ConexaoBancoDeDados
 {
     public partial class Form1 : Form
     {
+        string teste;
+
         public Form1()
         {
             InitializeComponent();
@@ -39,8 +41,8 @@ namespace ConexaoBancoDeDados
 
             dtview.DataSource = dataSet;
             dtview.DataMember = dataSet.Tables[0].TableName;
-         
-            conexaoNova.Close();            
+
+            conexaoNova.Close();
         }
 
         private void dtview_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -82,6 +84,37 @@ namespace ConexaoBancoDeDados
             dtview.DataSource = dataSet;
             dtview.DataMember = dataSet.Tables[0].TableName;
 
+            conexaoNova.Close();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+                string sql = "SELECT nome, cpf FROM Clientes WHERE cpf =  '" + txpesquisar.Text + "'";
+
+                SqlConnection conexaoNova = new SqlConnection("Server=179.108.180.209;Database=SistemaWendel;User Id=sa;Password=senac123;");
+                conexaoNova.Open();
+
+                using (var comando = new SqlCommand(sql, conexaoNova))
+                {
+                    using (var reader = comando.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                             teste = txtcpf.Text = reader[1].ToString();
+                             txtnome.Text = reader[0].ToString();
+                             txtcpf.Text = reader[1].ToString();
+                        }
+                    }
+                }
+                if (teste == null)
+                {
+                    MessageBox.Show("Cadastro Não Encontrado!");
+                }
             conexaoNova.Close();
         }
     }
