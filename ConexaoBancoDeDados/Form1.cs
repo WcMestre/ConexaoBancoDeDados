@@ -117,5 +117,29 @@ namespace ConexaoBancoDeDados
                 }
             conexaoNova.Close();
         }
+
+        private void btexcluir_Click(object sender, EventArgs e)
+        {
+            string sql = "DELETE FROM Clientes WHERE cpf = '" + txtcpf.Text + "'";
+
+            SqlConnection conexaoNova = new SqlConnection("Server=179.108.180.209;Database=SistemaWendel;User Id=sa;Password=senac123;");
+            SqlCommand comando = new SqlCommand(sql, conexaoNova);
+            comando.CommandType = CommandType.Text;
+            conexaoNova.Open();
+            comando.ExecuteNonQuery();
+            conexaoNova.Close();
+        }
+
+        private void btupdate_Click(object sender, EventArgs e)
+        {
+            string sql = "UPDATE Clientes SET nome = '" + txtnome.Text + "', cpf = '" + txtcpf.Text + "' WHERE cpf = '" + txpesquisar.Text + "'";
+
+            SqlConnection conexaoNova = new SqlConnection("Server=179.108.180.209;Database=SistemaWendel;User Id=sa;Password=senac123;");
+            SqlCommand comando = new SqlCommand(sql, conexaoNova);
+            comando.CommandType = CommandType.Text;
+            conexaoNova.Open();
+            comando.ExecuteNonQuery();
+            conexaoNova.Close();
+        }
     }
 }

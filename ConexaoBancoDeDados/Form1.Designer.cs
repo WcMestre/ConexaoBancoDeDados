@@ -39,6 +39,8 @@ namespace ConexaoBancoDeDados
             this.txpesquisar = new System.Windows.Forms.MaskedTextBox();
             this.lbpesquisar = new System.Windows.Forms.Label();
             this.btpesquisar = new System.Windows.Forms.Button();
+            this.btupdate = new System.Windows.Forms.Button();
+            this.btexcluir = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dtview)).BeginInit();
             this.SuspendLayout();
             // 
@@ -53,9 +55,9 @@ namespace ConexaoBancoDeDados
             // 
             // btsalvar
             // 
-            this.btsalvar.Location = new System.Drawing.Point(518, 208);
+            this.btsalvar.Location = new System.Drawing.Point(262, 205);
             this.btsalvar.Name = "btsalvar";
-            this.btsalvar.Size = new System.Drawing.Size(132, 31);
+            this.btsalvar.Size = new System.Drawing.Size(112, 31);
             this.btsalvar.TabIndex = 1;
             this.btsalvar.Text = "Salvar";
             this.btsalvar.UseVisualStyleBackColor = true;
@@ -63,9 +65,9 @@ namespace ConexaoBancoDeDados
             // 
             // btatualizar
             // 
-            this.btatualizar.Location = new System.Drawing.Point(656, 208);
+            this.btatualizar.Location = new System.Drawing.Point(400, 205);
             this.btatualizar.Name = "btatualizar";
-            this.btatualizar.Size = new System.Drawing.Size(132, 31);
+            this.btatualizar.Size = new System.Drawing.Size(112, 31);
             this.btatualizar.TabIndex = 2;
             this.btatualizar.Text = "Atualizar";
             this.btatualizar.UseVisualStyleBackColor = true;
@@ -138,11 +140,33 @@ namespace ConexaoBancoDeDados
             this.btpesquisar.UseVisualStyleBackColor = true;
             this.btpesquisar.Click += new System.EventHandler(this.button1_Click);
             // 
+            // btupdate
+            // 
+            this.btupdate.Location = new System.Drawing.Point(538, 205);
+            this.btupdate.Name = "btupdate";
+            this.btupdate.Size = new System.Drawing.Size(112, 31);
+            this.btupdate.TabIndex = 10;
+            this.btupdate.Text = "Update";
+            this.btupdate.UseVisualStyleBackColor = true;
+            this.btupdate.Click += new System.EventHandler(this.btupdate_Click);
+            // 
+            // btexcluir
+            // 
+            this.btexcluir.Location = new System.Drawing.Point(676, 205);
+            this.btexcluir.Name = "btexcluir";
+            this.btexcluir.Size = new System.Drawing.Size(112, 31);
+            this.btexcluir.TabIndex = 11;
+            this.btexcluir.Text = "Excluir";
+            this.btexcluir.UseVisualStyleBackColor = true;
+            this.btexcluir.Click += new System.EventHandler(this.btexcluir_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 606);
+            this.Controls.Add(this.btexcluir);
+            this.Controls.Add(this.btupdate);
             this.Controls.Add(this.btpesquisar);
             this.Controls.Add(this.txpesquisar);
             this.Controls.Add(this.lbpesquisar);
@@ -174,6 +198,8 @@ namespace ConexaoBancoDeDados
         private System.Windows.Forms.MaskedTextBox txpesquisar;
         private System.Windows.Forms.Label lbpesquisar;
         private System.Windows.Forms.Button btpesquisar;
+        private System.Windows.Forms.Button btupdate;
+        private System.Windows.Forms.Button btexcluir;
     }
 }
 
